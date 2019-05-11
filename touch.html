@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="zepto.min.js"></script>
+	<script>
+		$(function() {
+			var i = $("#i1");
+			var xIni, yIni;
+
+			i.on("touchstart", function(e) {
+				xIni = e.targetTouches[0].pageX;
+				yIni = e.targetTouches[0].pageY;
+			});
+
+			i.on('touchmove', function(e) {
+				if(e.targetTouches[0].pageX > xIni+10) {
+					alert("va a la derecha");
+				}
+
+				if(e.targetTouches[0].pageX < xIni-10) {
+					alert("va a la izquierda");
+				}
+			});
+		});
+	</script>
+	<style>
+		.cuadro {
+			width: 300px;
+			height: 200px;
+			border: solid 1px #000;
+		}
+	</style>
+	<title>Document</title>
+</head>
+<body>
+	<h1>Ejemplo Touch con zepto</h1>
+	<div class="cuadro" id="i1">
+		
+	</div>
+</body>
+</html>
