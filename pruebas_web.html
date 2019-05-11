@@ -12,17 +12,17 @@
     <script>
        function inicia(){
           	var xIni;
-         	var yIni;
+         	  var yIni;
           	var canvas = document.getElementById('objeto');
           	
-          	canvas.addEventListener('touchstart', function(e){
-              	if (e.targetTouches.length == 1) { 
-		        	var touch = e.targetTouches[0]; 
-		          	xIni = touch.pageX;
+          	/*canvas.addEventListener('touchstart', function(e){
+              if (e.targetTouches.length == 1) { 
+		        	  var touch = e.targetTouches[0]; 
+		            xIni = touch.pageX;
 		          	yIni = touch.pageY;
-       			}
+       			  }
           	}, false);
-          
+          */
           	canvas.addEventListener('touchmove', function(e){
             	if (e.targetTouches.length == 1) { 
           			var touch = e.targetTouches[0]; 
